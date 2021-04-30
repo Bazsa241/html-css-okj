@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$burger-bg: #027b8b;
+
+body {
+  background: #f5b403;
+  padding: 10rem 0;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+  background: $burger-bg;
+  border-radius: 50%;
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 15px;
+    gap: 5px;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background: #ffffff;
+      border-radius: 1px;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+
+  h1 {
+    color: $burger-bg;
+  }
+
+  input {
+    padding: 1rem .5rem;
+    font-size: .8rem;
+
+    &::placeholder {
+      color: $burger-bg;
+    }
+  }
+
+  .adatkezeles-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    label {
+      color: $burger-bg;
+
+      a {
+        color: $burger-bg;
+      }
+    }
+  }
+
+  button {
+    align-self: center;
+    padding: 1rem 5rem;
+    background: $burger-bg;
+    color: #ffffff;
+    border: 1px solid white;
+  }
+}
+
+
+@media (max-width: 800px) {
+  body {
+    padding: 10vh 5vw;
+  }
+
+  form {
+    max-width: 100%;
+
+    h1 {
+      margin-top: 1rem;
+      text-align: right;
+    }
+  }
+
+}
